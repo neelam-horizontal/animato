@@ -1,0 +1,64 @@
+:root {
+    --salmon: #EF9D71;
+    --dark-salmon: #532521;
+    --cyan: #AEDEE0;
+    --dark-cyan: #1f2f32;
+    --clip: 100%;
+}
+
+/* Whenever we select the text the background color will come as this */
+*::selection {
+    /* background-color: salmon; */
+    background-color: var(--salmon);
+}
+
+@font-face {
+    font-family: PPNeueMachina-Ultrabold;
+    src: url("../../public/fonts/PPNeueMachina-Ultrabold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: PPNeueMachina-Regular;
+    src: url("../../public/fonts/PPNeueMachina-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: PPNeueMachina-Light;
+    src: url("../../public/fonts/PPNeueMachina-Light.otf") format("opentype");
+}
+
+body {
+    transition: background-color ease-out .5s;
+}
+
+body[theme="black"] {
+    background-color: black;
+}
+
+body[theme="black"] .section {
+    color: white;
+}
+
+body[theme="cyan"] {
+    background-color: var(--cyan);
+}
+
+body[theme="cyan"] .section {
+    color: var(--dark-cyan);
+}
+
+body[theme="salmon"] {
+    background-color: salmon;
+}
+
+body[theme="salmon"] .section {
+    color: var(--dark-salmon);
+}
+
+body[theme="white"] {
+    background-color: white;
+}
+
+body[theme="white"] .section {
+    color: black;
+}
