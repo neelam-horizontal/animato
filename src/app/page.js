@@ -9,6 +9,7 @@ import Vertical from "./components/Vertical";
 import Team from "./components/Team";
 import Description from "./components/Description";
 import Capsules from "./components/Capsules";
+import SubFooter from "./components/SubFooter";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
       <Team />
       <Description />
       <Capsules />
+      <SubFooter />
       <Footer />
     </body>
     </>

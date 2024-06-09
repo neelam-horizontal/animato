@@ -62,7 +62,7 @@ function Footer() {
               type="text"
               placeholder="Email Address"
             />
-            <div className="px-10 py-5 w-fit border-[1px] border-[--dark-cyan]">
+            <div className="px-10 py-5 w-fit bg-[#f5f19c] text-black border-[1px] border-[--dark-cyan]">
               <div className="maskerBtn overflow-hidden">
                 <span className="inpne-block translate-y-1">Our Solutions</span>
               </div>

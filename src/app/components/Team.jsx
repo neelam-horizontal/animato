@@ -67,7 +67,7 @@ function Team() {
           <div className="list mt-10 w-full px-10">
         <div
           id={`listElem${team.id}`}
-          className="listElem border-b-2 border-slate-800 w-full py-[3rem] relative"
+          className="listElem border-b-2 border-slate-800 w-full py-[3rem] relative hover:bg-[#9e62d6]"
         >
           <div className="relative flex items-center justify-between z-[3]">
             <div className="left flex gap-20">

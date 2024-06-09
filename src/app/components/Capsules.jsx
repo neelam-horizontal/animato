@@ -26,7 +26,7 @@ function Capsules() {
   }, []);
 
   return (
-    <div className="capsules w-full flex items-start justify-between h-screen mt-[100px] px-32 bg-[#8888b6]">
+    <div className="capsules w-full flex items-start justify-between h-screen mt-[100px] px-32 bg-[#9f9fd8]">
       <div className="left w-1/3 h-full flex flex-col justify-between py-10">
         <h1 className="text-3xl leading-[2.8rem]">
           Stay up-to-date on the latest trends innovations and thought
