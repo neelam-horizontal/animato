@@ -22,7 +22,7 @@ function Footer() {
         {
           scrollTrigger: {
             trigger: capsuleSection,
-            start: "top 30%",
+            start: "top 60%",
             end: "bottom bottom",
             // markers: true,
             scrub: 4,
