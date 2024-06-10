@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 function Vertical() {
-  // gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -16,31 +15,18 @@ function Vertical() {
     gsap.to(sildeSection, {
       scrollTrigger: {
         trigger: ".verticalDiv",
-        // screenX: 10,
         start: "top top",
         end: "bottom bottom",
         // markers: true,
         scrub: 2,
       },
       xPercent: -200,
-      // ease: "Power2",
-      // },
-      // gsap.to("slide", {
-      //   scrollTrigger: {
-      //     trigger: "verticalDiv",
-      //     start: "top top",
-      //     end: "bottom bottom",
-      //     markers: true,
-      //     scrub: 2,
-      //     xPercent: -200,
-      //   },
     });
   }, []);
 
   return (
     <div
     data-color="salmon"
-      // onScrollCapture={gsap.registerPlugin(ScrollTrigger)}
       className="verticalDiv section w-full"
     >
       <div className="cont h-[400vh] relative">

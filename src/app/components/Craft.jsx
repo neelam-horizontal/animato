@@ -7,27 +7,34 @@ import Image from "next/image";
 
 const cardData = [
   {
-  id: 1,
-  headerTitle: "Driven by Purpose",
-  content: "We believe technology can dramatically improve the experience of managing health, and when crafted with empathy, intention, and expertise, impact lives at scale.",
-  icon: "/camera.svg"
-}, {
-  id: 2,
-  headerTitle: "Driven by Purpose",
-  content: "We believe technology can dramatically improve the experience of managing health, and when crafted with empathy, intention, and expertise, impact lives at scale.",
-  icon: "/inspiration.svg"
-}, {
-  id: 3,
-  headerTitle: "Driven by Purpose",
-  content: "We believe technology can dramatically improve the experience of managing health, and when crafted with empathy, intention, and expertise, impact lives at scale.",
-  icon: "/setting.svg"
-}, {
-  id: 4,
-  headerTitle: "Driven by Purpose",
-  content: "We believe technology can dramatically improve the experience of managing health, and when crafted with empathy, intention, and expertise, impact lives at scale.",
-  icon: "/target.svg"
-},
-]
+    id: 1,
+    headerTitle: "Driven by Purpose",
+    content:
+      "We believe technology can dramatically improve the experience of managing health, and when crafted with empathy, intention, and expertise, impact lives at scale.",
+    icon: "/camera.svg",
+  },
+  {
+    id: 2,
+    headerTitle: "Driven by Purpose",
+    content:
+      "We believe technology can dramatically improve the experience of managing health, and when crafted with empathy, intention, and expertise, impact lives at scale.",
+    icon: "/inspiration.svg",
+  },
+  {
+    id: 3,
+    headerTitle: "Driven by Purpose",
+    content:
+      "We believe technology can dramatically improve the experience of managing health, and when crafted with empathy, intention, and expertise, impact lives at scale.",
+    icon: "/setting.svg",
+  },
+  {
+    id: 4,
+    headerTitle: "Driven by Purpose",
+    content:
+      "We believe technology can dramatically improve the experience of managing health, and when crafted with empathy, intention, and expertise, impact lives at scale.",
+    icon: "/target.svg",
+  },
+];
 
 function Craft() {
   useEffect(() => {
@@ -79,244 +86,30 @@ function Craft() {
         </div>
       </div>
       <div className="cardsBlock mt-[20%] flex flex-col gap-12 w-2/5">
-        {cardData.map((item, key) => 
-        <div key={key} className="cardContiner One">
-          <div className="cards flex flex-row w-2/3 px-5 py-4 gap-[3rem] border-[1px] border-[--dark-cyan]">
-            <div className="flex flex-col">
-              <h2 className="text-xl font-light leading-[3rem]">
-                {item.headerTitle}
-              </h2>
-              <p>
-                {item.content}
-              </p>
-            </div>
+        {cardData.map((item, key) => (
+          <div key={key} className="cardContiner One">
+            <div className="cards flex flex-row w-2/3 px-5 py-4 gap-[3rem] border-[1px] border-[--dark-cyan]">
+              <div className="flex flex-col">
+                <h2 className="text-xl font-light leading-[3rem]">
+                  {item.headerTitle}
+                </h2>
+                <p>{item.content}</p>
+              </div>
 
-            <div className="cards__icon content-center">
-              <div class="svg w-embed">
-              <Image
-              className="w-[60%] h-[60%] object-cover"
-              src={item.icon}
-              width={30}
-              height={30}
-              alt="Capsule Img 2"
-            />
+              <div className="cards__icon content-center">
+                <div class="svg w-embed">
+                  <Image
+                    className="w-[60%] h-[60%] object-cover"
+                    src={item.icon}
+                    width={30}
+                    height={30}
+                    alt="Capsule Img 2"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        )}
-        {/* <div className="cardContiner One">
-          <div className="cards flex flex-row w-2/3 px-5 py-4 gap-[3rem] border-[1px] border-[--dark-cyan]">
-            <div className="flex flex-col">
-              <h2 className="text-xl font-light leading-[3rem]">
-                Driven by Purpose
-              </h2>
-              <p>
-                We believe technology can dramatically improve the experience of
-                managing health, and when crafted with empathy, intention, and
-                expertise, impact lives at scale.
-              </p>
-            </div>
-
-            <div className="cards__icon content-center">
-              <div class="svg w-embed">
-                <svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.2"
-                    d="M45.9998 10H31.9998L19.7271 26L31.9998 56L59.9998 26L45.9998 10Z"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    d="M18 10H46L60 26L32 56L4 26L18 10Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M44.2726 26L31.9998 56L19.7271 26L31.9998 10L44.2726 26Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M4 26H60"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="cardContiner two">
-          <div className="cards flex flex-row w-2/3 px-5 py-4 gap-[3rem] border-[1px] border-[--dark-cyan]">
-            <div className="flex flex-col">
-              <h2 className="text-xl font-light leading-[3rem]">
-                Driven by Purpose
-              </h2>
-              <p>
-                We believe technology can dramatically improve the experience of
-                managing health, and when crafted with empathy, intention, and
-                expertise, impact lives at scale.
-              </p>
-            </div>
-
-            <div className="cards__icon content-center">
-              <div class="svg w-embed">
-                <svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.2"
-                    d="M45.9998 10H31.9998L19.7271 26L31.9998 56L59.9998 26L45.9998 10Z"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    d="M18 10H46L60 26L32 56L4 26L18 10Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M44.2726 26L31.9998 56L19.7271 26L31.9998 10L44.2726 26Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M4 26H60"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="cardContiner three">
-          <div className="cards flex flex-row w-2/3 px-5 py-4 gap-[3rem] border-[1px] border-[--dark-cyan]">
-            <div className="flex flex-col">
-              <h2 className="text-xl font-light leading-[3rem]">
-                Driven by Purpose
-              </h2>
-              <p>
-                We believe technology can dramatically improve the experience of
-                managing health, and when crafted with empathy, intention, and
-                expertise, impact lives at scale.
-              </p>
-            </div>
-
-            <div className="cards__icon content-center">
-              <div class="svg w-embed">
-                <svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.2"
-                    d="M45.9998 10H31.9998L19.7271 26L31.9998 56L59.9998 26L45.9998 10Z"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    d="M18 10H46L60 26L32 56L4 26L18 10Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M44.2726 26L31.9998 56L19.7271 26L31.9998 10L44.2726 26Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M4 26H60"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="cardContiner four">
-          <div className="cards flex flex-row w-2/3 px-5 py-4 gap-[3rem] border-[1px] border-[--dark-cyan]">
-            <div className="flex flex-col">
-              <h2 className="text-xl font-light leading-[3rem]">
-                Driven by Purpose
-              </h2>
-              <p>
-                We believe technology can dramatically improve the experience of
-                managing health, and when crafted with empathy, intention, and
-                expertise, impact lives at scale.
-              </p>
-            </div>
-
-            <div className="cards__icon content-center">
-              <div class="svg w-embed">
-                <svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.2"
-                    d="M45.9998 10H31.9998L19.7271 26L31.9998 56L59.9998 26L45.9998 10Z"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    d="M18 10H46L60 26L32 56L4 26L18 10Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M44.2726 26L31.9998 56L19.7271 26L31.9998 10L44.2726 26Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M4 26H60"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        ))}
       </div>
     </div>
   );

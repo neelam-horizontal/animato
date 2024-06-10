@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 function Footer() {
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -13,33 +12,33 @@ function Footer() {
 
     const tl = gsap.timeline();
 
-      tl.fromTo(
-        ".logoName",
-        {
-          y: 0,
-          opacity: 0,
+    tl.fromTo(
+      ".logoName",
+      {
+        y: 0,
+        opacity: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: capsuleSection,
+          start: "top 60%",
+          end: "bottom bottom",
+          // markers: true,
+          scrub: 4,
         },
-        {
-          scrollTrigger: {
-            trigger: capsuleSection,
-            start: "top 60%",
-            end: "bottom bottom",
-            // markers: true,
-            scrub: 4,
-          },
-          y: -125,
-          opacity: 1,
-          rotate: 0,
-          ease: "power4",
-          duration: 1,
-          transformOrigin: "bottom top",
-          delay: 0.85,
-          scrub: 1,
-          stagger: {
-            each: 0.1,
-          },
-        }
-      );
+        y: -125,
+        opacity: 1,
+        rotate: 0,
+        ease: "power4",
+        duration: 1,
+        transformOrigin: "bottom top",
+        delay: 0.85,
+        scrub: 1,
+        stagger: {
+          each: 0.1,
+        },
+      }
+    );
   }, []);
 
   return (

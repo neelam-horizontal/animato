@@ -2,39 +2,11 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
-// import gsap from "gsap";
-// import { useRef } from "react";
-// import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-// import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import animateStyles from "../../Animation.module.css";
 
 function LandingPage() {
-  // const container = useRef();
-
-  // useGSAP(
-  //   () => {
-  //     // use selectors...
-  //     gsap.to(".videoDiv", {
-  //       ScrollTrigger: {
-  //         trigger: ".home",
-  //         start: "top top",
-  //         end: "bottom top",
-  //         markers: true,
-  //         pin: true,
-  //         scrub: 2,
-  //       },
-  //       "--clip": "0%",
-  //       ease: "power2.in",
-  //       duration: 2,
-  //     });
-  //   },
-  //   { scope: container }
-  // );
-
-  // gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
     const videoSection = gsap.utils.toArray(".videoDiv");
     const marqueeSlideSection = gsap.utils.toArray(".marqueeSlidesDiv");
@@ -50,10 +22,6 @@ function LandingPage() {
         end: "bottom bottom",
         // markers: true,
         scrub: 2,
-        // pin: true,
-        // end: 'center center',
-        // end: "+=" + document.querySelector(".heading").offsetWidth,
-        // scrub: true
       },
     });
 
@@ -61,22 +29,8 @@ function LandingPage() {
     tl.to(
       videoSection,
       {
-        // gsap.to(videoSection, {
-        // scrollTrigger: {
-        //   trigger: ".videoDiv",
-        //   screenX: 10,
-        //   start: "top top",
-        //   end: "bottom top",
-        //   // end: "+=" + document.querySelector(".heading").offsetWidth,
-        //   markers: true,
-        //   pin: true,
-        //   scrub: 2,
-        //   // end: 'center center',
-        //   // scrub: true
-        // },
         "--clip": "2%",
         ease: "power2",
-        // duration: 2,
       },
       "animateOnScroll"
     )
@@ -93,7 +47,6 @@ function LandingPage() {
         {
           xPercent: -10,
           stagger: 0.03,
-          // ease: "Power2",
         },
         "animateSlides"
       )
@@ -102,7 +55,6 @@ function LandingPage() {
         {
           xPercent: 10,
           stagger: 0.03,
-          // ease: "Power2",
         },
         "animateSlides"
       )
@@ -111,7 +63,6 @@ function LandingPage() {
         {
           "--clip": "0%",
           ease: "power2",
-          // duration: 2,
         },
         "animateSlides"
       );
