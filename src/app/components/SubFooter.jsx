@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import "./svgImgRotate.css";
 
 function SubFooter() {
@@ -9,13 +13,59 @@ function SubFooter() {
     });
   };
 
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   const capsuleSection = gsap.utils.toArray(".contactpst");
+  //   const capsuleSelected = gsap.utils.toArray(".movingIcon");
+
+  //   gsap.to(capsuleSelected, {
+  //     pointerEvents:{
+  //       opacity: 1,
+  //           x: gsap.utils.mapRange(0, window.innerWidth, -200, 200, capsuleSelected.clientX),
+  //           ease: "power2",
+  //           duration: 0.5,
+  //     },
+  //     // scrollTrigger: {
+  //     //   trigger: capsuleSection,
+  //     //   start: "top 70%",
+  //     //   end: "bottom bottom",
+  //     //   // markers: true,
+  //     //   scrub: 1,
+  //     // },
+  //     x: 0,
+  //     ease: "power4",
+  //   });
+
+  // }, []);
+  useEffect(() => {
+    gsap.set(".movingIcon", { xPercent: 0, yPercent: 0 })
+    // let targets = gsap.utils.toArray([".movingIcon", ".movingSvg"]);
+    let targets = gsap.utils.toArray(".movingIcon");
+    window.addEventListener("mousemove", (e) => {
+      gsap.to(targets, {
+        duration: 0.5,
+        x: gsap.utils.mapRange(0, window.innerWidth - 500, 80, -80, e.clientX - 500),
+        ease: "power2",
+        // overwrite: "auto",
+        // stagger: 0.02,
+      });
+    });
+
+    window.addEventListener("mouseleave", function (e) {
+      gsap.to(targets, { x: 0, ease: "power2", duration: 0.5 });
+    });
+  }, 
+[]
+);
+
   return (
     <div className="SubFooter h-[20rem] text-black bg-[#f5f19c] w-full">
       <div className="topDiv flex flex-row justify-between pl-[7rem] pr-[15rem] py-[7rem] overflow-hidden">
         <div className="subscribe text-4xl">
           <h1 className="w-[30rem]">Join Animato Today.</h1>
         </div>
-        <div className="contactpst -mt-7 relative">
+        <div className="movingIcon -mt-7 relative">
           <div id="svgImgRotate" className="rotating absolute"></div>
           <div
             className="border border-black w-[7.5rem] h-[7.5rem] absolute ml-[9px] mt-[9px] px-[2.78rem] py-[2.57rem] rounded-[100vw] border-solid cursor-pointer"
