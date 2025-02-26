@@ -37,8 +37,13 @@ function SubFooter() {
   return (
     <div className="SubFooter h-[20rem] text-black bg-[#f5f19c] w-full">
       <div className="topDiv flex flex-row justify-between pl-[7rem] pr-[15rem] py-[7rem] overflow-hidden">
-        <div className="subscribe text-4xl">
-          <h1 className="w-[30rem]">Join Animato Today.</h1>
+        <div className="subscribe text-5xl">
+          <h2
+            className="fluid !text-5xl w-[70rem]"
+            style={{ textShadow: "-2px 2px 5px #f6dddd" }}
+          >
+            Join Animato Today.
+          </h2>
         </div>
         <div className="movingIcon -mt-7 relative">
           <div id="svgImgRotate" className="rotating absolute"></div>
