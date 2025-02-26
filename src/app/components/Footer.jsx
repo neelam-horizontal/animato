@@ -42,7 +42,7 @@ function Footer() {
   }, []);
 
   return (
-    <div className="Footer h-[44rem] overflow-hidden">
+    <div className="Footer team section h-[44rem] w-full overflow-hidden">
       <div className="topDiv flex flex-row justify-between px-[5rem] py-[4rem]">
         <div className="contactpst text-2xl flex flex-col gap-5">
           <p>Home</p>

@@ -32,15 +32,18 @@ function Description() {
         // markers: true,
       },
       opacity: 1,
-      stagger: .03,
+      stagger: 0.03,
       ease: "power2",
     });
   }, []);
 
   return (
-    <div data-color="cyan" className="Description section w-full h-[70vh] flex items-center justify-center">
+    <div
+      data-color="cyan"
+      className="Description section w-full h-[70vh] flex items-center justify-center"
+    >
       <div className="text w-[70%] flex flex-col items-center justify-center">
-        <h3 className="textPara text-indigo-300 text-3xl font-light text-center leading-[2.8rem]">
+        <h3 className="textPara text-teal-800 text-3xl font-light text-center leading-[2.8rem]">
           Working with the Animato team has been such a pleasure! We took on a
           significant project to rebuild our entire platform and the team
           approached the project with our best interests in mind. They continue
@@ -50,9 +53,9 @@ function Description() {
           feedback and desire to build the product like it is their own.
         </h3>
 
-        <div className="person text-indigo-300 flex flex-col items-center justify-center mt-10 gap-5">
+        <div className="person text-teal-800 flex flex-col items-center justify-center mt-10 gap-5">
           <div className="image w-32 h-32 bg-red-500 overflow-hidden rounded-full">
-          <Image
+            <Image
               className="w-full h-full object-cover rounded-full"
               src="/person.jpeg"
               width={100}

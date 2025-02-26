@@ -48,7 +48,7 @@ function Team() {
   }, []);
 
   return (
-    <div className="team section font-[PPNeueMachina-Regular] h-[120vh] py-20">
+    <div className="team section font-[PPNeueMachina-Regular] h-[120vh] w-full py-20">
       <h1 className="text-center text-8xl tracking-tight">Our Team</h1>
       {/* Team members */}
       {items.map((team, index) => (

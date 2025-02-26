@@ -8,6 +8,7 @@ import Craft from "./components/Craft";
 import Vertical from "./components/Vertical";
 import Team from "./components/Team";
 import Description from "./components/Description";
+import Collaborate from "./components/Collaborate";
 import Capsules from "./components/Capsules";
 import SubFooter from "./components/SubFooter";
 import Footer from "./components/Footer";
@@ -23,28 +24,29 @@ export default function Home() {
         start: "top 50%",
         end: "bottom 50%",
         // markers: true,
-        onEnter: function(){
+        onEnter: function () {
           document.body.setAttribute("theme", e.dataset.color);
         },
-        onEnterBack: function(){
+        onEnterBack: function () {
           document.body.setAttribute("theme", e.dataset.color);
-        }
+        },
       });
     });
   });
 
   return (
     <>
-    <body theme="black">
-      <LandingPage />
-      <Craft />
-      <Vertical />
-      <Team />
-      <Description />
-      <Capsules />
-      <SubFooter />
-      <Footer />
-    </body>
+      <body theme="black">
+        <LandingPage />
+        <Craft />
+        <Vertical />
+        <Team />
+        <Description />
+        <Collaborate />
+        <Capsules />
+        <SubFooter />
+        <Footer />
+      </body>
     </>
   );
 }
