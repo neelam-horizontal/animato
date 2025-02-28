@@ -5,6 +5,8 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -92,7 +94,7 @@ function Footer() {
             <p>Privacy Popcy</p>
             <p>Terms of Use</p>
           </div>
-          <div>© 2024 Animato Inc. All rights reserved.</div>
+          <div>Copyright © {currentYear} Animato Inc. All rights reserved.</div>
         </div>
       </div>
     </div>

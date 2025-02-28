@@ -310,6 +310,7 @@ div.tp-dfwv {
  h2.fluid {
   font-size: 72px;
   background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+  text-shadow: 0px 0px 20px #fb00f6;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

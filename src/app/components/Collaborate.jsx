@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./Collaborate.css";
 
@@ -177,7 +178,14 @@ const Collaborate = () => {
         </ul>
       </section>
       <section>
-        <h2 class="fluid">Animato.</h2>
+        <h2 class="fluid mt-[5em]">Animato.</h2>
+        <Image
+          className="w-full h-full object-cover rounded-full absolute -z-10"
+          src="/animato-gify2.gif"
+          width={100}
+          height={100}
+          alt="f6"
+        />
       </section>
 
       {/* top logo */}
